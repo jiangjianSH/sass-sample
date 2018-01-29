@@ -1,0 +1,13 @@
+body {
+  font: {
+    size: 12px;
+    weight: bolder;
+  }
+}
+
+/* nested properties can have a value */
+.funky {
+  font: 20px/24px fantasy {
+    weight: bold;
+  }
+}

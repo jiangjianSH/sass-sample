@@ -1,0 +1,10 @@
+body {
+  $width: 100px !global; //if I remove "!global", there will be a compile error whose message is  'Undefined variable: "$width".'
+  a {
+    width: $width;
+  }
+}
+
+.info {
+  width: $width;
+}
