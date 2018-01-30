@@ -1,0 +1,35 @@
+p {
+  cursor: e + -resize;
+}
+
+/*
+Note that if a quoted string is added to an unquoted string
+ (that is, the quoted string is to the left of the +),
+  the result is a quoted string. Likewise,
+   if an unquoted string is added to a quoted string (the unquoted string is to the left of the +),
+the result is an unquoted string. For example:
+ */
+
+.a {
+ content: "Bar" + Foo;
+}
+
+.b {
+  font-family: sans- + "serif";
+}
+
+p:before {
+  content: "I ate #{5 + 10} pies!";
+}
+
+@mixin does-parent-exist {
+  @if & {
+    &:hover {
+      color: red;
+    }
+  }@else {
+    a {
+      color:red;
+    }
+  }
+}

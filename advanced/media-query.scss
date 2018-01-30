@@ -1,0 +1,26 @@
+.sidebar {
+  width: 300px;
+  @media screen and (orientation: landscape) {
+    width: 500px;
+  }
+}
+
+//@media queries can also be nested within one another. The queries will then be combined using the and operator. For example:
+@media screen {
+  .sidebar {
+    @media (orientation: landscape) {
+      width: 500px;
+    }
+  }
+}
+
+//, @media queries can contain SassScript expressions (including variables, functions, and operators) in place of the feature names and feature values. For example:
+$media: screen;
+$feature: -webkit-min-device-pixel-ratio;
+$value: 1.5;
+
+@media #{$media} and ($feature: $value) {
+  .sidebar {
+    width: 500px;
+  }
+}

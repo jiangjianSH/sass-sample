@@ -1,0 +1,17 @@
+#fake-links .link {
+  @extend a;
+}
+
+a {
+  color: blue;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#admin .tabbar a {
+  font-weight: bold;
+}
+#demo .overview .fakelink {
+  @extend a;
+}

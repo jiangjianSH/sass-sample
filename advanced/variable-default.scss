@@ -1,0 +1,23 @@
+/**
+You can assign to variables if they aren't already assigned
+by adding the !default flag to the end of the value.
+ This means that if the variable has already been assigned to, it won't be re-assigned,
+but if it doesn't have a value yet, it will be given one.
+ */
+
+$content: "First content";
+$content: "Second content?" !default;
+$new_content: "First time reference" !default;
+
+#main {
+  content: $content;
+  new-content: $new_content;
+}
+
+//Variables with null values are treated as unassigned by !default:
+$null_content: null;
+$null_content: "this is null" !default;
+
+.null-a {
+  content: $null_content;
+}
